@@ -1,0 +1,189 @@
+fileFormatVersion: 2
+guid: 54cdfa60ddf58f049b6be7e4f41566cf
+timeCreated: 1493737996
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: AntennaBase
+    100002: AntennaLower
+    100004: AntennaUpper
+    100006: CarBody
+    100008: CarInterior
+    100010: //RootNode
+    100012: FrontBumper
+    100014: FrontLights
+    100016: InsideMesh
+    100018: RearBumper
+    100020: RearLights
+    100022: Shassi
+    100024: Tire
+    100026: Tire Rim
+    100028: TireArmLeft
+    100030: TireArmRight
+    100032: TireAxeLeft
+    100034: TireAxeRight
+    100036: TireBrake
+    100038: TireSpringArm
+    100040: TireSpringLeft
+    100042: TireSpringRight
+    100044: Windows
+    400000: AntennaBase
+    400002: AntennaLower
+    400004: AntennaUpper
+    400006: CarBody
+    400008: CarInterior
+    400010: //RootNode
+    400012: FrontBumper
+    400014: FrontLights
+    400016: InsideMesh
+    400018: RearBumper
+    400020: RearLights
+    400022: Shassi
+    400024: Tire
+    400026: Tire Rim
+    400028: TireArmLeft
+    400030: TireArmRight
+    400032: TireAxeLeft
+    400034: TireAxeRight
+    400036: TireBrake
+    400038: TireSpringArm
+    400040: TireSpringLeft
+    400042: TireSpringRight
+    400044: Windows
+    2300000: AntennaBase
+    2300002: AntennaLower
+    2300004: AntennaUpper
+    2300006: CarBody
+    2300008: CarInterior
+    2300010: FrontBumper
+    2300012: FrontLights
+    2300014: InsideMesh
+    2300016: RearBumper
+    2300018: RearLights
+    2300020: Shassi
+    2300022: Tire
+    2300024: Tire Rim
+    2300026: TireArmLeft
+    2300028: TireArmRight
+    2300030: TireAxeLeft
+    2300032: TireAxeRight
+    2300034: TireBrake
+    2300036: TireSpringArm
+    2300038: TireSpringLeft
+    2300040: TireSpringRight
+    2300042: Windows
+    3300000: AntennaBase
+    3300002: AntennaLower
+    3300004: AntennaUpper
+    3300006: CarBody
+    3300008: CarInterior
+    3300010: FrontBumper
+    3300012: FrontLights
+    3300014: InsideMesh
+    3300016: RearBumper
+    3300018: RearLights
+    3300020: Shassi
+    3300022: Tire
+    3300024: Tire Rim
+    3300026: TireArmLeft
+    3300028: TireArmRight
+    3300030: TireAxeLeft
+    3300032: TireAxeRight
+    3300034: TireBrake
+    3300036: TireSpringArm
+    3300038: TireSpringLeft
+    3300040: TireSpringRight
+    3300042: Windows
+    4300000: AntennaUpper
+    4300002: AntennaBase
+    4300004: AntennaLower
+    4300006: Tire Rim
+    4300008: Tire
+    4300010: FrontLights
+    4300012: TireAxeRight
+    4300014: TireArmRight
+    4300016: TireSpringRight
+    4300018: TireBrake
+    4300020: FrontBumper
+    4300022: TireAxeLeft
+    4300024: RearBumper
+    4300026: RearLights
+    4300028: TireSpringLeft
+    4300030: TireSpringArm
+    4300032: CarInterior
+    4300034: TireArmLeft
+    4300036: Shassi
+    4300038: InsideMesh
+    4300040: Windows
+    4300042: CarBody
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
