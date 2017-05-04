@@ -54,6 +54,7 @@ namespace UnityStandardAssets.Vehicles.Car
         public float MaxSpeed{get { return m_Topspeed; }}
         public float Revs { get; private set; }
         public float AccelInput { get; private set; }
+        public bool isBoosted;
 
         // Use this for initialization
         private void Start()
@@ -69,6 +70,7 @@ namespace UnityStandardAssets.Vehicles.Car
 
             m_Rigidbody = GetComponent<Rigidbody>();
             m_CurrentTorque = m_FullTorqueOverAllWheels - (m_TractionControl*m_FullTorqueOverAllWheels);
+            isBoosted = false;
         }
 
 
@@ -181,7 +183,7 @@ namespace UnityStandardAssets.Vehicles.Car
 
                     speed *= 2.23693629f;
                     if (speed > m_Topspeed)
-                        m_Rigidbody.velocity = (m_Topspeed/2.23693629f) * m_Rigidbody.velocity.normalized;
+                        m_Rigidbody.velocity = (m_Topspeed / 2.23693629f) * m_Rigidbody.velocity.normalized;
                     break;
 
                 case SpeedType.KPH:
@@ -200,10 +202,23 @@ namespace UnityStandardAssets.Vehicles.Car
             switch (m_CarDriveType)
             {
                 case CarDriveType.FourWheelDrive:
-                    thrustTorque = accel * (m_CurrentTorque / 4f);
-                    for (int i = 0; i < 4; i++)
+                    if (!isBoosted)
                     {
-                        m_WheelColliders[i].motorTorque = thrustTorque;
+                        print("Unboosted");
+                        thrustTorque = accel * (m_CurrentTorque / 4f);
+                        for (int i = 0; i < 4; i++)
+                        {
+                            m_WheelColliders[i].motorTorque = thrustTorque;
+                        }
+                    }
+                    else 
+                    {
+                        print("boosted");
+                        thrustTorque = 10f * (m_CurrentTorque / 4f);
+                        for (int i = 0; i < 4; i++)
+                        {
+                            m_WheelColliders[i].motorTorque = thrustTorque;
+                        }
                     }
                     break;
 
@@ -343,7 +358,7 @@ namespace UnityStandardAssets.Vehicles.Car
             }
             else
             {
-                m_CurrentTorque += 10 * m_TractionControl;
+                m_CurrentTorque += 10 * m_TractionControl; //here
                 if (m_CurrentTorque > m_FullTorqueOverAllWheels)
                 {
                     m_CurrentTorque = m_FullTorqueOverAllWheels;
