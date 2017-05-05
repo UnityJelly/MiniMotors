@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 namespace UnityStandardAssets.Vehicles.Car
@@ -44,7 +45,7 @@ namespace UnityStandardAssets.Vehicles.Car
         private float m_GearFactor;
         private float m_OldRotation;
         private float m_CurrentTorque;
-        private Rigidbody m_Rigidbody;
+        [SerializeField] private Rigidbody m_Rigidbody;
         private const float k_ReversingThreshold = 0.01f;
 
         public bool Skidding { get; private set; }
@@ -55,6 +56,7 @@ namespace UnityStandardAssets.Vehicles.Car
         public float Revs { get; private set; }
         public float AccelInput { get; private set; }
         public bool isBoosted;
+        public Rigidbody rbody;
 
         // Use this for initialization
         private void Start()
@@ -72,7 +74,6 @@ namespace UnityStandardAssets.Vehicles.Car
             m_CurrentTorque = m_FullTorqueOverAllWheels - (m_TractionControl*m_FullTorqueOverAllWheels);
             isBoosted = false;
         }
-
 
         private void GearChanging()
         {
@@ -377,6 +378,20 @@ namespace UnityStandardAssets.Vehicles.Car
                 }
             }
             return false;
+        }
+
+        //in your PlayerScript
+        public IEnumerator SetPowerupValue(float _value, float _duration)
+        {
+            //set you boost or whatever here, something like
+            rbody.drag = 0.03f;
+            
+            print("boosted");
+            yield return new WaitForSeconds(_duration);
+            //reset your player's boost value here, something like
+            rbody.drag -= 0.1f;
+            //rbody.mass = 1500f;
+            print("Unboosted");
         }
     }
 }
